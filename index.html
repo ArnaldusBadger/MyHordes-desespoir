@@ -133,6 +133,21 @@ document.getElementById("z").addEventListener("input",calc);
 document.getElementById("reset").addEventListener("click",function(){
   document.getElementById("z").value="";calc();});
 </script>
-<script data-goatcounter="https://mddcalculator.goatcounter.com/count" async src="//gc.zgo.at/count.js" onload="try{window.goatcounter.visit_count({append:'#visits',no_branding:true,attr:{width:'170',height:'40'},style:'div{border:0;background:transparent;color:#d6b98a;font-size:12px}'})}catch(e){}"></script>
+<script data-goatcounter="https://mddcalculator.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>
+// Compteur de visites : on lit le nombre via GoatCounter et on l'affiche en simple texte
+(function(){
+  var el=document.getElementById("visits");
+  var r=new XMLHttpRequest();
+  r.addEventListener("load",function(){
+    try{
+      var c=JSON.parse(this.responseText).count;
+      if(c!==undefined&&el){el.textContent="Visites : "+c;}
+    }catch(e){}
+  });
+  r.open("GET","https://mddcalculator.goatcounter.com/counter/"+encodeURIComponent(location.pathname)+".json");
+  r.send();
+})();
+</script>
 </body>
 </html>
