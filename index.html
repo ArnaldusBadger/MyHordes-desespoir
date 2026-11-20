@@ -74,7 +74,8 @@ footer{padding:10px 18px 16px;color:var(--muted);font-size:13px;text-align:cente
     <div class="res" id="r2">Entre un nombre de zombies.</div>
   </div>
 
-  <footer>Calculs basés sur les chiffres de la communauté MyHordes. Site non officiel.<br>Créé par Mushu, bien guidé par Claude IA.</footer>
+  <footer>Calculs basés sur les chiffres de la communauté MyHordes. Site non officiel.<br>Créé par Mushu, bien guidé par Claude IA.
+  <div id="visits" style="margin-top:10px"></div></footer>
 </div>
 
 <script>
@@ -132,5 +133,6 @@ document.getElementById("z").addEventListener("input",calc);
 document.getElementById("reset").addEventListener("click",function(){
   document.getElementById("z").value="";calc();});
 </script>
+<script data-goatcounter="https://mddcalculator.goatcounter.com/count" async src="//gc.zgo.at/count.js" onload="try{window.goatcounter.visit_count({append:'#visits',no_branding:true,attr:{width:'170',height:'40'},style:'div{border:0;background:transparent;color:#d6b98a;font-size:12px}'})}catch(e){}"></script>
 </body>
 </html>
